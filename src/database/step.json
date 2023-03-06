@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "Step>G-0",
+    "description": "identificar el titulo de la pagina",
+    "action": "chek",
+    "selector": "title",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>G-0"]
+  },
+  {
+    "id": "Step>G-1",
+    "description": "Esperar 10 segundos",
+    "action": "stop",
+    "selector": "",
+    "pocket": "",
+    "payload": "10000",
+    "catch": ["Step>G-3", "Step>G-1"]
+  },
+  {
+    "id": "Step>G-2",
+    "description": "Finalizar con exito",
+    "action": "none",
+    "selector": "",
+    "pocket": "",
+    "payload": "",
+    "catch": ["", "Step>G-2"]
+  },
+  {
+    "id": "Step>G-3",
+    "description": "Esperar 3 segundos",
+    "action": "stop",
+    "selector": "",
+    "pocket": "",
+    "payload": "3000",
+    "catch": ["null", "Step>G-3"]
+  },
+  {
+    "id": "Step>G-4",
+    "description": "Esperar 0 segundos",
+    "action": "stop",
+    "selector": "",
+    "pocket": "",
+    "payload": "1",
+    "catch": ["null", "Step>G-4"]
+  },
+  {
+    "id": "Step>G-5",
+    "description": "Esperar 1 segundos",
+    "action": "stop",
+    "selector": "",
+    "pocket": "",
+    "payload": "1000",
+    "catch": ["null", "Step>G-3"]
+  },
+  {
+    "id": "Step>SN-0",
+    "description": "Direccionar al home de servicios Nutresa",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>Home-Nutresa",
+    "catch": ["Step>GS-2", "Step>SN-0"]
+  },
+  {
+    "id": "Step>SN-1",
+    "description": "Desplegar el Menu de opciones SN",
+    "action": "click",
+    "selector": "#splitbutton-1104-btnInnerEl",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>GS-2", "Step>SN-1"]
+  },
+  {
+    "id": "Step>SN-2",
+    "description": "Presionar la opcion de cerrar sesión",
+    "action": "click",
+    "selector": "#menuitem-1126-textEl",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>GS-2", "Step>SN-2"]
+  },
+  {
+    "id": "Step>GS-0",
+    "description": "Direccionar la ventana a Sugar",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>Login-Sugar",
+    "catch": ["Step>GS-2", "Step>GS-0"]
+  },
+  {
+    "id": "Step>GS-1",
+    "description": "Verficar que la pagina de sugar cargo",
+    "action": "chek",
+    "selector": "#header > div > div > div > div.module-list > ul > li:nth-child(1) > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-1", "Step>GS-1"]
+  },
+  {
+    "id": "Step>GS-2",
+    "description": "Pesionar el boton iniciar seción Sugar",
+    "action": "click",
+    "selector": "form .wide [name=\"external_login_button\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>GS-2"]
+  },
+  {
+    "id": "Step>GS-4",
+    "description": "Verificar que los cambios se guardaron con exito",
+    "action": "chek",
+    "selector": "#alerts > div.alert-wrapper > div.alert.alert-success.alert-block.closeable > span.text > strong",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>GS-4"]
+  },
+  {
+    "id": "Step>GS-5",
+    "description": "Cerrar alerta guardado con exito",
+    "action": "click",
+    "selector": "#alerts > div.alert-wrapper > div.alert.alert-success.alert-block.closeable > button",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-4", "Step>GS-5"]
+  },
+  {
+    "id": "Step>GS-6",
+    "description": "Cerrar alerta error al conectar al servidor",
+    "action": "click",
+    "selector": "#alerts > div:nth-child(1) > div > button > i",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-4", "Step>GS-6"]
+  },
+  {
+    "id": "Step>GS-7",
+    "description": "Verificar si sugar esta cargando.",
+    "action": "chek",
+    "selector": "#alerts > div > div > strong > div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>GS-7"]
+  },
+  {
+    "id": "Step>LN-1",
+    "description": "Ingresar el nombre de usuario",
+    "action": "typePass",
+    "selector": "#usernameForm .field-wrapper [name=\"username\"]",
+    "pocket": "User-Nutresa",
+    "payload": "99",
+    "catch": ["Step>G-3", "Step>LN-1"]
+  },
+  {
+    "id": "Step>LN-2",
+    "description": "Presionar el boton siguiente de usuario",
+    "action": "click",
+    "selector": "#usernameForm .button-wrapper [type=\"submit\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LN-2"]
+  },
+  {
+    "id": "Step>LN-3",
+    "description": "Ingresar la contraseña",
+    "action": "typePass",
+    "selector": "#passwordForm .field-wrapper [name=\"answer\"]",
+    "pocket": "Password-Nutresa",
+    "payload": "99",
+    "catch": ["Step>G-3", "Step>LN-3"]
+  },
+  {
+    "id": "Step>LN-4",
+    "description": "Presionar el boton siguiente de contraseña",
+    "action": "click",
+    "selector": "#passwordForm .button-wrapper [type=\"submit\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LN-4"]
+  },
+  {
+    "id": "Step>LN-5",
+    "description": "Verificar que se logueo en Nutresa",
+    "action": "chek",
+    "selector": "#splitbutton-1104-btnInnerEl",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>LN-7","Step>LN-6","Detour>LNR-1","Step>LN-5"]
+  },
+  {
+    "id": "Step>LN-6",
+    "description": "Verificar si existe mensage de error",
+    "action": "chek",
+    "selector": "#usernameForm > div.form-field-container > div > div.error-message",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>LN-9","Step>LN-8"]
+  },
+  {
+    "id": "Step>LN-7",
+    "description": "Setear el poket en caso que si esxista el mensaje error",
+    "action": "duplicatePocket",
+    "selector": "",
+    "pocket": "Leap>LN-catch-1",
+    "payload": "retry",
+    "catch": []
+  },
+  {
+    "id": "Step>LN-8",
+    "description": "Setear el valor del poket cunado no se encontro el mensaje error",
+    "action": "duplicatePocket",
+    "selector": "",
+    "pocket": "Leap>LN-catch-1",
+    "payload": "leap",
+    "catch": []
+  },
+  {
+    "id": "Step>LN-9",
+    "description": "Verificar si aparecio el boton sigiente Usuario",
+    "action": "chek",
+    "selector": "#usernameForm .button-wrapper [type=\"submit\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": []
+  },
+  {
+    "id": "Step>LJ-0",
+    "description": "Direccionar a la ventana loguin de Jira",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>Login-Jira",
+    "catch": ["Step>G-3", "Step>LJ-0"]
+  },
+  {
+    "id": "Step>LJ-1",
+    "description": "Ingresar el usuario de Jira",
+    "action": "paste",
+    "selector": "#username",
+    "pocket": "User-Jira",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LJ-1"]
+  },
+  {
+    "id": "Step>LJ-2",
+    "description": "Presionar el boton continuar",
+    "action": "click",
+    "selector": "#login-submit > span > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LJ-2"]
+  },
+  {
+    "id": "Step>LJ-3",
+    "description": "Ingresar la contraseña de Jira",
+    "action": "type",
+    "selector": "#password",
+    "pocket": "",
+    "payload": "Password-Jira",
+    "catch": ["Step>G-3", "Step>LJ-3"]
+  },
+  {
+    "id": "Step>LJ-4",
+    "description": "Presionar el boton iniciar sesion Jira",
+    "action": "click",
+    "selector": "#login-submit > span > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LJ-4"]
+  },
+  {
+    "id": "Step>LJ-5",
+    "description": "Cpmprobar que cargo el header de Jira",
+    "action": "chek",
+    "selector": "#ak-jira-navigation > header",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LJ-5"]
+  },
+  {
+    "id": "Step>FTS-1",
+    "description": "Desplegar los filtros guardados",
+    "action": "click",
+    "selector": ".control-group .table-cell .select2-container .select2-chosen",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FTS-1"]
+  },
+  {
+    "id": "Step>FTS-2",
+    "description": "Seleccionar el filtro tareas pendientes",
+    "action": "click",
+    "selector": "ul li div [data-id=\"952875d6-56ba-11ed-acc1-02eebc4697dd\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FTS-2"]
+  },
+  {
+    "id": "Step>FTS-3",
+    "description": "Seleccionar el filtro sin actualizar",
+    "action": "click",
+    "selector": "ul li div [data-id=\"a20b9f38-5e2d-11ed-989c-02eebc4697dd\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FTS-3"]
+  },
+  {
+    "id": "Step>FTS-4",
+    "description": "Ordenar los elementos por ultima modificacion asc",
+    "action": "click",
+    "selector": "#content > div > div.row-fluid > div.main-pane > div.pipeline-refresh-btn > div.main-content > div:nth-child(2) > div.flex-list-view.left-actions.right-actions > div.flex-list-view-content > table > thead > tr.flex-list-row-header > th.orderBydate_modified > div > div.ui-draggable.ui-draggable-handle > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FTS-4"]
+  },
+  {
+    "id": "Step>FTS-5",
+    "description": "Ordenar los elementos por ultima modificacion desc",
+    "action": "click",
+    "selector": "#content > div > div.row-fluid > div.main-pane > div.pipeline-refresh-btn > div.main-content > div:nth-child(2) > div.flex-list-view.left-actions.right-actions > div.flex-list-view-content > table > thead > tr.flex-list-row-header > th.sorting_desc.orderBydate_modified > div > div.ui-draggable.ui-draggable-handle > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FTS-5"]
+  },
+  {
+    "id": "Step>LTS-0",
+    "description": "Direccionar la ventana a la seccion de tareas Sugar",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>Sugar-tasks",
+    "catch": ["Step>GS-2", "Step>LTS-0"]
+  },
+  {
+    "id": "Step>LTS-1",
+    "description": "Copiar el asunto del caso Sugar",
+    "action": "copyText",
+    "selector": "#content > div > div.row-fluid > div.main-pane > div.pipeline-refresh-btn > div.main-content > div:nth-child(2) > div.flex-list-view.left-actions.right-actions > div.flex-list-view-content > table > tbody > tr:nth-child(1) > td:nth-child(4) > span > div > a",
+    "pocket": "Task>asunto",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>LTS-1"]
+  },
+  {
+    "id": "Step>LTS-2",
+    "description": "Copiar el enlace de la tarea Sugar",
+    "action": "copyLinck",
+    "selector": "#content > div > div.row-fluid > div.main-pane > div.pipeline-refresh-btn > div.main-content > div:nth-child(2) > div.flex-list-view.left-actions.right-actions > div.flex-list-view-content > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > div > a",
+    "pocket": "",
+    "payload": "Task>task-linck",
+    "catch": ["Step>G-3", "Step>LTS-2"]
+  },
+  {
+    "id": "Step>LTS-3",
+    "description": "Copiar la URL del caso Sugar",
+    "action": "copyLinck",
+    "selector": "#content > div > div.row-fluid > div.main-pane > div.pipeline-refresh-btn > div.main-content > div:nth-child(2) > div.flex-list-view.left-actions.right-actions > div.flex-list-view-content > table > tbody > tr:nth-child(1) > td:nth-child(4) > span > div > a",
+    "pocket": "Task>caso-linck",
+    "payload": "Task>caso-linck",
+    "catch": ["Step>G-3", "Step>LTS-3"]
+  },
+  {
+    "id": "Step>P-1",
+    "description": "Extraer el texto para buscar el caso en Jira",
+    "action": "poketExtract",
+    "selector": "",
+    "pocket": "Task>asunto",
+    "payload": "\\d{8}\\-[A-Za-zÀ-ÿ]+\\s",
+    "catch": ["Step>G-3", "Step>P-1"]
+  },
+  {
+    "id": "Step>P-2",
+    "description": "Extraer el texto para buscar el caso en Jira",
+    "action": "poketRefine",
+    "selector": "",
+    "pocket": "Task>asunto",
+    "payload": "[^\\d{8}\\-[A-Za-z]+\\s]",
+    "catch": ["Step>G-3", "Step>P-2"]
+  },
+  {
+    "id": "Step>P-3",
+    "description": "Copiar la plantilla para documentar en Sugar en otro pocket",
+    "action": "duplicatePocket",
+    "selector": "plantilla-ducumentar-Sugar",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>P-3"]
+  },
+  {
+    "id": "Step>P-4",
+    "description": "Agegar la URL del caso Jira en la respuesta para documentar la tarea en Sugar",
+    "action": "poketRefine",
+    "selector": "Jira>caso-linck",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "{{linck}}",
+    "catch": ["Step>G-3", "Step>P-4"]
+  },
+  {
+    "id": "Step>P-5",
+    "description": "Agegar el estado del caso Jira en la respuesta para documentar la tarea en Sugar",
+    "action": "poketRefine",
+    "selector": "Jira>caso-estado",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "{{estado}}",
+    "catch": ["Step>G-3", "Step>P-5"]
+  },
+  {
+    "id": "Step>P-6",
+    "description": "Agegar analista que agrego el cometario en Jira en la respuesta para documentar la tarea en Sugar",
+    "action": "poketRefine",
+    "selector": "Jira>caso-analista",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "{{analista}}",
+    "catch": ["Step>G-3", "Step>P-6"]
+  },
+  {
+    "id": "Step>P-7",
+    "description": "Agegar la fecha de actualizacion del caso Jira en la respuesta para documentar la tarea en Sugar",
+    "action": "poketRefine",
+    "selector": "Jira>caso-update",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "{{update}}",
+    "catch": ["Step>G-3", "Step>P-7"]
+  },
+  {
+    "id": "Step>P-8",
+    "description": "Agegar el comentario del caso Jira en la respuesta para documentar la tarea en Sugar",
+    "action": "poketRefine",
+    "selector": "Jira>caso-comentario",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "{{comentario}}",
+    "catch": ["Step>G-3", "Step>P-8"]
+  },
+  {
+    "id": "Step>P-9",
+    "description": "Limpiar el comentario del caso Jira",
+    "action": "duplicatePocket",
+    "selector": "",
+    "pocket": "Jira>caso-comentario",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>P-9"]
+  },
+  {
+    "id": "Step>P-10",
+    "description": "Limpiar el resultado de la busqueda en Jira",
+    "action": "poketExtract",
+    "selector": "",
+    "pocket": "Jira>filtro-resultado",
+    "payload": "No se encontraron incidencias",
+    "catch": ["Step>G-3", "Step>P-10"]
+  },
+  {
+    "id": "Step>P-11",
+    "description": "Setear pocket para documentar Tarea Sugar cuando no se crea Jira",
+    "action": "duplicatePocket",
+    "selector": "Sugar>rechazo-sinJira",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "No existe caso Jira",
+    "catch": ["Step>G-3", "Step>P-11"]
+  },
+  {
+    "id": "Step>P-12",
+    "description": "Setear pocket para documentar nota en Sugar cuando no se crea Jira",
+    "action": "duplicatePocket",
+    "selector": "Sugar>rechazo-sinJira",
+    "pocket": "Jira>caso-comentario",
+    "payload": "No existe caso Jira",
+    "catch": ["Step>G-3", "Step>P-12"]
+  },
+  {
+    "id": "Step>P-13",
+    "description": "Setear el estado del caso en WONT'FIX",
+    "action": "duplicatePocket",
+    "selector": "",
+    "pocket": "Jira>caso-estado",
+    "payload": "WONT'FIX",
+    "catch": ["Step>G-3", "Step>P-13"]
+  },
+  {
+    "id": "Step>P-14",
+    "description": "Setear el estado del caso en SIN JIRA",
+    "action": "duplicatePocket",
+    "selector": "",
+    "pocket": "Jira>caso-estado",
+    "payload": "SIN JIRA",
+    "catch": ["Step>G-3", "Step>P-14"]
+  },
+  {
+    "id": "Step>P-15",
+    "description": "Setear el estado del caso en SIN INICIAR",
+    "action": "duplicatePocket",
+    "selector": "",
+    "pocket": "Jira>caso-estado",
+    "payload": "SIN INICIAR",
+    "catch": ["Step>G-3", "Step>P-15"]
+  },
+  {
+    "id": "Step>FJ-0",
+    "description": "Direccionar la ventana al filtro en Jira para casos Sugar",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>filter-Jira",
+    "catch": ["Step>G-3", "Step>FJ-0"]
+  },
+  {
+    "id": "Step>FJ-1",
+    "description": "Pegar el numero de caso Sugar en busqueda de jira",
+    "action": "paste",
+    "selector": "#searcher-query",
+    "pocket": "Task>asunto",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FJ-1"]
+  },
+  {
+    "id": "Step>FJ-2",
+    "description": "Presionar el boton busqueda en Jira",
+    "action": "click",
+    "selector": "#global-issue-navigator-container > div.navigator-body > div > form > div.aui-group > div.aui-item.search-wrap > div.search-container > div.search-field-container > div > div.search-criteria > ul > li:nth-child(7) > button",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3","Step>FJ-0","Step>FJ-2"]
+  },
+  {
+    "id": "Step>FJ-3",
+    "description": "Copiar el enlace del caso Jira",
+    "action": "copyLinck",
+    "selector": "#issuetable > tbody > tr > td.issuekey > a:nth-child(2)",
+    "pocket": "",
+    "payload": "Jira>caso-linck",
+    "catch": ["Step>G-3", "Step>FJ-3"]
+  },
+  {
+    "id": "Step>FJ-4",
+    "description": "Copiar el analista asignado al caso Jira",
+    "action": "copyText",
+    "selector": "#issuetable > tbody > tr > td.assignee",
+    "pocket": "Jira>caso-analista",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FJ-4"]
+  },
+  {
+    "id": "Step>FJ-5",
+    "description": "Copiar el estado del caso Jira",
+    "action": "copyText",
+    "selector": "#issuetable > tbody > tr > td.status > span",
+    "pocket": "Jira>caso-estado",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FJ-5"]
+  },
+  {
+    "id": "Step>FJ-6",
+    "description": "Copiar la fecha de actualizacion del caso Jira",
+    "action": "copyText",
+    "selector": "#issuetable > tbody > tr > td.updated > span > time",
+    "pocket": "Jira>caso-update",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FJ-6"]
+  },
+  {
+    "id": "Step>FJ-7",
+    "description": "Copiar el resultado de la busqueda en filtro Jira",
+    "action": "copyText",
+    "selector": "#global-issue-navigator-container > div.navigator-body > div.contained-content > div.navigator-group > div.results-panel.navigator-item > div.navigator-content > div > div",
+    "pocket": "Jira>filtro-resultado",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FJ-7"]
+  },
+  {
+    "id": "Step>FJ-8",
+    "description": "Copiar el total de resultados de la busqueda en filtro Jira",
+    "action": "copyText",
+    "selector": "#global-issue-navigator-container > div.navigator-body > div > div > div > div > div > div > div.aui-group.aui-group-split.issue-table-info-bar > div:nth-child(1) > span",
+    "pocket": "Jira>filtro-total-resultados",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>FJ-8"]
+  },
+  {
+    "id": "Step>CJ-0",
+    "description": "Direcionar la pagina al caso Jira",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "Jira>caso-linck",
+    "catch": ["Step>G-2", "Step>CJ-0"]
+  },
+  {
+    "id": "Step>CJ-1",
+    "description": "Copiar el estado del caso Jira",
+    "action": "copyText",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._u5f318bx._1ul91ll1._v5647jka > div > div._3um0ewfl > div.sc-8aod2e-0.mrKiF > div > div > div._u5f3n7od._n3tdftgi > div > div > div > div > div > button > span.css-178ag6o",
+    "pocket": "Jira>caso-estado",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-1"]
+  },
+  {
+    "id": "Step>CJ-2",
+    "description": "Copiar el nombre del ultimo analista que comento el caso Jira",
+    "action": "copyText",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._16jlkb7n._1o9zidpf._i0dlidpf._1ul9xilx._19bv18bx > div > span > div._19pkj0ox._2hwxidpf._otyr1crf._18u0idpf > div > span > div > div.css-arz0qc > div > div.css-1i27l4i > div:nth-child(1) > div > span > div > span",
+    "pocket": "Jira>caso-analista",
+    "payload": "",
+    "catch": ["Step>G-1", "Step>CJ-2"]
+  },
+  {
+    "id": "Step>CJ-3",
+    "description": "Copiar la fecha y hora del ultimo comentario en el caso Jira",
+    "action": "copyText",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._16jlkb7n._1o9zidpf._i0dlidpf._1ul9xilx._19bv18bx > div > span > div._19pkj0ox._2hwxidpf._otyr1crf._18u0idpf > div > span > div > div.css-arz0qc > div > div.css-1i27l4i > div:nth-child(2) > span",
+    "pocket": "Jira>caso-update",
+    "payload": "",
+    "catch": ["Step>CJ-6","Step>CJ-15","Step>P-15"]
+  },
+  {
+    "id": "Step>CJ-4",
+    "description": "Copiar el ultimo comentario en el caso Jira",
+    "action": "copyText",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._16jlkb7n._1o9zidpf._i0dlidpf._1ul9xilx._19bv18bx > div > span > div._19pkj0ox._2hwxidpf._otyr1crf._18u0idpf > div > span > div > div.css-arz0qc > div > div.css-z2exhc > div > div > div > div > div > div:nth-child(1)",
+    "pocket": "Jira>caso-comentario",
+    "payload": "",
+    "catch": ["Step>P-9"]
+  },
+  {
+    "id": "Step>CJ-5",
+    "description": "Presionar al boton Asignarme a mi",
+    "action": "click",
+    "selector": "div[data-testid=\"issue.views.field.user.assignee\"] > div[role=\"presentation\"] > div > div > div > div[role=\"button\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-5"]
+  },
+  {
+    "id": "Step>CJ-6",
+    "description": "Desplegar las opciones para cambiar de estado el caso Jira",
+    "action": "click",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._u5f318bx._1ul91ll1._v5647jka > div > div._3um0ewfl > div.sc-8aod2e-0.mrKiF > div > div > div._u5f3n7od._n3tdftgi > div > div > div > div > div > button",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-6"]
+  },
+  {
+    "id": "Step>CJ-7",
+    "description": "Se leccionar el estado En Analicis",
+    "action": "click",
+    "selector": "div.css-1ljkvdv div:nth-child(1)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-7"]
+  },
+  {
+    "id": "Step>CJ-8",
+    "description": "Seleccionar el estado Escalado al funcional",
+    "action": "click",
+    "selector": "div.css-1ljkvdv div:nth-child(4)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-8"]
+  },
+  {
+    "id": "Step>CJ-9",
+    "description": "Seleccionar boton para agregar respuesta al cliente",
+    "action": "click",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._16jlkb7n._1o9zidpf._i0dlidpf._1ul9xilx._19bv18bx > div > span > span > div > div > div._16jlkb7n._1o9zkb7n._i0dl1osq._1ul9idpf._swxz1kw7 > div > div._1e0c1ule > button:nth-child(2) > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-9"]
+  },
+  {
+    "id": "Step>CJ-10",
+    "description": "Agregar un comentario al caso Jira",
+    "action": "pasteText",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._16jlkb7n._1o9zidpf._i0dlidpf._1ul9xilx._19bv18bx > div > span > span > div > div > div._16jlkb7n._1o9zkb7n._i0dl1osq._1ul9idpf._swxz1kw7 > div:nth-child(2) > div:nth-child(1) > div > div > div._1x2nzo7u._1o48ijlo._1gouijlo._1yimijlo._wa8tzwnf._nh9ozwnf._1u5nijlo._qdx3ijlo._13utijlo._v5hfijlo._18guijlo._o9eyijlo._uq4eijlo._llkqijlo > div > div.css-by1vms > div.akEditor.css-119bow0 > div.css-sox1a6 > div > div.ua-chrome.ProseMirror.pm-table-resizing-plugin",
+    "pocket": "Jira>comentario-incidente",
+    "payload": "Jira>comentario-incidente",
+    "catch": ["Step>G-3", "Step>CJ-10"]
+  },
+  {
+    "id": "Step>CJ-11",
+    "description": "Presionar el boton para guardar comentario en caso Jira",
+    "action": "click",
+    "selector": "#ak-main-content > div > div > div._4t3i1osq._1e0c1txw._2lx21bp4 > div._4t3i1osq._kqswh2mm > div._kqswh2mm._4t3i1osq > div._ogwtidpf._6tinidpf._1cezidpf._m3zkidpf._7yjtidpf._ldgnidpf._un3pidpf._29hzidpf._4t3i1osq._1e0c1txw._2lx21bp4._15y61q9c._k8em1osq._dzc24jg8 > div > div._1reo1e7b._18m92qvy._12ji1r31._1qu2glyw._12y31o36._16jlkb7n._1o9zidpf._i0dlidpf._1ul9xilx._19bv18bx > div > span > span > div > div > div._16jlkb7n._1o9zkb7n._i0dl1osq._1ul9idpf._swxz1kw7 > div:nth-child(2) > div:nth-child(1) > div > div > div._1x2nzo7u._1o48ijlo._1gouijlo._1yimijlo._wa8tzwnf._nh9ozwnf._1u5nijlo._qdx3ijlo._13utijlo._v5hfijlo._18guijlo._o9eyijlo._uq4eijlo._llkqijlo > div > div.css-by1vms > div.css-10tiwzk > div > button.css-1mq3qcb",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-2", "Step>CJ-11"]
+  },
+  {
+    "id": "Step>CJ-12",
+    "description": "Seleccionar el estado Finalizada",
+    "action": "click",
+    "selector": "div.css-1ljkvdv div:nth-child(6)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-12"]
+  },
+  {
+    "id": "Step>CJ-13",
+    "description": "Se leccionar el estado En Progreso",
+    "action": "click",
+    "selector": "div.css-1ljkvdv div:nth-child(3)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-13"]
+  },
+  {
+    "id": "Step>CJ-14",
+    "description": "Se leccionar el estado Resuelto o WontFix",
+    "action": "click",
+    "selector": "div.css-1ljkvdv div:nth-child(5)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-14"]
+  },
+  {
+    "id": "Step>CJ-15",
+    "description": "Se leccionar el estado span[innerText=\"SIN INICIAR\"",
+    "action": "click",
+    "selector": "div.css-1ljkvdv div:nth-child(1)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CJ-15"]
+  },
+  {
+    "id": "Step>TS-1",
+    "description": "Direccionar lapagina a la tarea en Sugar",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "Task>task-linck",
+    "catch": ["Step>GS-3", "Step>TS-1"]
+  },
+  {
+    "id": "Step>TS-2",
+    "description": "Desplegar opciones para cambiar estado de la tarea",
+    "action": "click",
+    "selector": "span[data-name=\"status\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-2"]
+  },
+  {
+    "id": "Step>TS-3",
+    "description": "Seleccionar estado En Progreso",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(2) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-3"]
+  },
+  {
+    "id": "Step>TS-4",
+    "description": "Seleccionar estado Completada",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(3) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-4"]
+  },
+  {
+    "id": "Step>TS-5",
+    "description": "Presinar boton para ducumentar la tarea",
+    "action": "click",
+    "selector": "div[data-type=\"textarea\"] span.detail div.labels-on-side div.record-label-wrapper div[data-name=\"description\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-5"]
+  },
+  {
+    "id": "Step>TS-6",
+    "description": "Documentar la tarea en Sugar",
+    "action": "paste",
+    "selector": "div.record-link-wrapper textarea[name=\"description\"]",
+    "pocket": "documentar-tarea-Sugar",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-6"]
+  },
+  {
+    "id": "Step>TS-7",
+    "description": "Presionar el boton Guardar tarea Sugar",
+    "action": "click",
+    "selector": "div.btn-toolbar span > a[name=\"save_button\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-7"]
+  },
+  {
+    "id": "Step>TS-8",
+    "description": "Copiar la URL del caso Sugar",
+    "action": "copyLinck",
+    "selector": "#tabContent div[data-name=\"parent_name\"] span[data-fieldname=\"parent_name\"] a.ellipsis_inline",
+    "pocket": "",
+    "payload": "Sugar>caso-linck",
+    "catch": ["Step>G-3", "Step>TS-8"]
+  },
+  {
+    "id": "Step>TS-9",
+    "description": "Copiar el tipo de tarea Sugar",
+    "action": "copyText",
+    "selector": "span[data-fieldname=\"sasa_tipo_tarea_c\"] > span",
+    "pocket": "Sugar>tarea-tipo",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-9"]
+  },
+  {
+    "id": "Step>TS-10",
+    "description": "Desplegar las opciones de respuesta",
+    "action": "click",
+    "selector": "div[data-name=\"sasa_lista_respuesta_c\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-10"]
+  },
+  {
+    "id": "Step>TS-11",
+    "description": "seleccionar Si",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(2) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-11"]
+  },
+  {
+    "id": "Step>TS-12",
+    "description": "seleccionar No",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(3) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-12"]
+  },
+  {
+    "id": "Step>TS-13",
+    "description": "Seleccionar estado No Iniciada",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(1) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-13"]
+  },
+  {
+    "id": "Step>TS-14",
+    "description": "Seleccionar estado ComplePendiente informacion tada",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(4) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-14"]
+  },
+  {
+    "id": "Step>TS-15",
+    "description": "Seleccionar estado Aplazada",
+    "action": "click",
+    "selector": "#select2-drop ul li:nth-child(5) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>TS-15"]
+  },
+  {
+    "id": "Step>CS-0",
+    "description": "Direccionar al caso Sugar para esa tarea",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "Task>caso-linck",
+    "catch": ["Step>GS-2", "Step>CS-0"]
+  },
+  {
+    "id": "Step>CS-1",
+    "description": "Desplegar opciones para cambiar estado del Caso Sugar",
+    "action": "click",
+    "selector": "div[data-name=\"status\"] div.labels-on-side div.record-label-wrapper div[data-placement=\"bottom\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CS-1"]
+  },
+  {
+    "id": "Step>CS-2",
+    "description": "Seleccionar opcion para Rechazado",
+    "action": "click",
+    "selector": "div#select2-drop ul.select2-results li:nth-child(5) div",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CS-2"]
+  },
+  {
+    "id": "Step>CS-3",
+    "description": "Presionar boton guardar caso Sugar",
+    "action": "click",
+    "selector": "div.btn-toolbar.pull-right span > a[name=\"save_button\"]",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>CS-3"]
+  },
+  {
+    "id": "Step>NS-1",
+    "description": "Seleccionar boton para agregar nota",
+    "action": "click",
+    "selector": "div[data-subpanel-link=\"notes\"] div.subpanel-controls span.small a",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>NS-1"]
+  },
+  {
+    "id": "Step>NS-2",
+    "description": "Ingresar asunto nota Sugar",
+    "action": "paste",
+    "selector": "div.headerpane span.table-cell-wrapper input[type=\"text\"]",
+    "pocket": "Asunto-rechazo",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>NS-2"]
+  },
+  {
+    "id": "Step>NS-3",
+    "description": "Documentar nota Sugar",
+    "action": "paste",
+    "selector": "div.record-cell[data-type=\"textarea\"] textarea[aria-label=\"Nota\"]",
+    "pocket": "Jira>caso-comentario",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>NS-3"]
+  },
+  {
+    "id": "Step>NS-4",
+    "description": "Presionar el boton Guardar nota Sugar",
+    "action": "click",
+    "selector": "#drawers > div > div > div.main-pane > div > div > div.headerpane > h1 > div > span:nth-child(3) > a",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-3", "Step>NS-4"]
+  },
+  {
+    "id": "Step>FJI-0",
+    "description": "Direccionar la ventana de filtros por incidentes",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>Jira-filter-incidente",
+    "catch": ["Step>GS-2", "Step>FJI-0"]
+  },
+  {
+    "id": "Step>Sheets-0",
+    "description": "Direccionar la ventana a la hoja de Sheets gastos",
+    "action": "openPage",
+    "selector": "",
+    "pocket": "",
+    "payload": "URL>Sheets-gastos",
+    "catch": ["Step>G-5", "Step>Sheets-0"]
+  },
+  {
+    "id": "Step>Sheets-1",
+    "description": "Ingresar correo en google",
+    "action": "paste",
+    "selector": "#identifierId",
+    "pocket": "",
+    "payload": "jequintero.axity@novaventa.com",
+    "catch": ["Step>G-5", "Step>Sheets-1"]
+  },
+  {
+    "id": "Step>Sheets-2",
+    "description": "Hacer clic al boton continuar en correo",
+    "action": "click",
+    "selector": "#identifierNext > div > button > span",
+    "pocket": "",
+    "payload": "yeyko039",
+    "catch": ["Step>G-5", "Step>Sheets-2"]
+  },
+  {
+    "id": "Step>Sheets-3",
+    "description": "Ingeresar la contraseña del corre google",
+    "action": "paste",
+    "selector": "#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input",
+    "pocket": "",
+    "payload": "yeyko039",
+    "catch": ["Step>G-5", "Step>Sheets-3"]
+  },
+  {
+    "id": "Step>Sheets-4",
+    "description": "Hacer clic al boton continuar en constraseña",
+    "action": "click",
+    "selector": "#passwordNext > div > button > span",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-5", "Step>Sheets-4"]
+  },
+  {
+    "id": "Step>Sheets-5",
+    "description": "hacer clic a una celda",
+    "action": "click",
+    "selector": "#scrollable_right_1 > div:nth-child(1)",
+    "pocket": "",
+    "payload": "",
+    "catch": ["Step>G-5", "Step>Sheets-5"]
+  },
+  {
+    "id": "Step>Sheets-6",
+    "description": "copiar contenido de una celda",
+    "action": "copyText",
+    "selector": "#scrollable_right_1 > div:nth-child(1)",
+    "pocket": "Var>celda-1",
+    "payload": "",
+    "catch": ["Step>G-5", "Step>Sheets-6"]
+  },
+  {
+    "id": "Step>Sheets-7",
+    "description": "Pegar en contenido de la celda",
+    "action": "pasteText",
+    "selector": "#t-formula-bar-input > div",
+    "pocket": "",
+    "payload": "Var>celda-1",
+    "catch": ["Step>G-5", "Step>Sheets-7"]
+  }
+]

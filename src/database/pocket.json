@@ -1,0 +1,60 @@
+[
+    { "name": "User-Nutresa", "content": "NCNOsoptinov" },
+    {"name": "Password-Nutresa", "content": "Temporal123*" },
+    {"name": "User-Jira", "content": "jequintero.axity@novaventa.com" },
+    {"name": "Password-Jira", "content": "Nova[844]" },
+    {"name": "Asunto-rechazo", "content": "Motivo de rechazo" },
+    {
+      "name": "Comentario-rechazo",
+      "content": "Cordial saludo,\n\nLa tarea inicial (Analizar y responder) ya fue resuelta, desde soporte TI solo se gestiona y crea caso en jira para el correo de asignación del caso, no para tareas adicionales.\n\nSi la respuesta inicial no es la esperada, por favor documentar correctamente el caso y adjuntar la información necesaria para realizar un correcto análisis del caso."
+    },
+    {
+      "name": "URL>Login-Sugar",
+      "content": "https://novanutresa.sugarondemand.com"
+    },
+    {
+      "name": "URL>Login-Jira",
+      "content": "https://nutresa.atlassian.net/jira/servicedesk/projects/ST/queues/custom/19"
+    },
+    {
+      "name": "URL>Sugar-tasks",
+      "content": "https://novanutresa.sugarondemand.com/#Tasks"
+    },
+    {
+      "name": "URL>filter-Jira",
+      "content": "https://nutresa.atlassian.net/issues/?filter=10421"
+    },
+    {
+      "name": "plantilla-ducumentar-Sugar",
+      "content": "Caso Jira: {{linck}}\nEstado: {{estado}}\nAnalista asignado: {{analista}}\nFecha actualización: {{update}}\nComentario:\n\n{{comentario}}"
+    },
+    {
+      "name": "documentar-tarea-Sugar",
+      "content": "Caso Jira: {{linck}}\nEstado: {{estado}}\nAnalista asignado: {{analista}}\nFecha actualización: {{update}}\nComentario:\n\n{{comentario}}"
+    },
+    {
+      "name": "Sugar>rechazo-sinJira",
+      "content": "NO se recibió la notificación por correo para la asignación del caso Sugar a soporte TI en el correo soporteti@novaventa.com, por tal razón no se creo caso en Jira y nos es posible gestionar la tarea, el caso Sugar es rechazado."
+    },
+    {
+      "name": "URL>Home-Nutresa",
+      "content": "https://gruponutresa.my.idaptive.app/my#/MyApps"
+    },
+    {
+      "name": "URL>Jira-filter-incidente",
+      "content": "https://nutresa.atlassian.net/issues/?filter=10453"
+    },
+    {
+      "name": "Jira>comentario-incidente",
+      "content": "Cordial saludo,\n\nSe soluciona la novedad con el error (su cuenta se encuentra bloqueada temporalmente) de tal manera que la ME ya puede ingresar a su oficina virtual."
+    },
+    {
+      "name": "URL>Sheets-gastos",
+      "content": "https://docs.google.com/spreadsheets/d/1PHtFXhHWtJjW958oMrYgAIyv8lYHtD3i/edit#gid=2027581078"
+    },
+    {
+      "name": "Var>celda-1",
+      "content": "Content"
+    }
+  ]
+  

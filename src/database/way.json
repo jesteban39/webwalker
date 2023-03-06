@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Way>Sheets-1",
+    "description": "Modificar hojas Sheers con puppeteer",
+    "repeat": 1,
+    "steps": ["Step>Sheets-0","Step>Sheets-1","Step>Sheets-2","Step>Sheets-3","Step>Sheets-4","Step>Sheets-5","Step>Sheets-6","Step>Sheets-7"]
+  },
+  {
+    "id": "Way>NC-1",
+    "description": "Gestionar los casos en jira de incidente commerce",
+    "repeat": 1,
+    "steps": ["Way>LJ-1","Way>CJ-1"]
+  },
+  {
+    "id": "Way>CJ-1",
+    "description": "Gestionar un caso jira de incidente",
+    "repeat": 7,
+    "steps": ["Step>FJI-0","Step>FJ-3","Step>CJ-0","Step>CJ-5","Step>CJ-6","Step>CJ-7","Step>CJ-6","Step>CJ-13","Step>CJ-6","Step>CJ-14","Step>CJ-9","Step>CJ-10","Step>CJ-11"]
+  },
+  {
+    "id": "Way>CJ-2",
+    "description": "Gestionar un caso jira de incidente",
+    "repeat": 45,
+    "steps": ["Step>FJI-0","Step>FJ-3","Step>CJ-0","Step>CJ-6","Step>CJ-7"]
+  },
+  {
+    "id": "Way>M-1",
+    "description": "Actualizar tareas de Sugar con los comentarios y estados de Jira",
+    "repeat": 1,
+    "steps": ["Way>LNj-1","Way>FTS-1","Way>LJ-1","Way>M-2","Step>G-2"]
+  },
+  {
+    "id": "Way>LN-1",
+    "description": "Logearse en Sugar con usuario de red Nutreza",
+    "repeat": 1,
+    "steps": ["Step>SN-0","Step>SN-1","Step>SN-2","Step>LN-1", "Step>LN-2","Step>G-3","Step>LN-3","Step>LN-4","Step>LN-5"]
+  },
+  {
+    "id": "Way>LNj-1",
+    "description": "Logearse en Sugar con usuario de red Nutreza",
+    "repeat": 1,
+    "steps": ["Step>SN-0","Step>LN-1","Step>LN-2","Step>G-5","Step>LN-3","Step>LN-4","Step>LN-5"]
+  },
+  {
+    "id": "Way>M-2",
+    "description": "Actualizar la lista de tareas Sugar filtradas",
+    "repeat": 100,
+    "steps": ["Way>LTS-1","Way>FJ-1","Detour>CJ-1","Way>D-1","Way>TS-1","Detour>CC-1"]
+  },
+  {
+    "id": "Way>LJ-1",
+    "description": "Logearse en Jira",
+    "repeat": 1,
+    "steps": ["Step>LJ-0","Step>LJ-1","Step>LJ-2","Step>LJ-3","Step>LJ-4","Step>LJ-5"]
+  },
+  {
+    "id": "Way>FTS-1",
+    "description": "Filtrar taresas pendientes en Sugar",
+    "repeat": 1,
+    "steps": ["Step>LTS-0","Step>GS-2","Step>FTS-1","Step>FTS-2","Step>G-3","Step>FTS-4","Step>G-3","Step>FTS-4","Step>G-3"]
+  },
+  {
+    "id": "Way>LTS-1",
+    "description": "Extraer datos de una tarea Sugar",
+    "repeat": 1,
+    "steps": ["Step>LTS-0","Step>LTS-1","Step>LTS-2","Step>LTS-3","Step>P-1","Step>P-3"]
+  },
+  {
+    "id": "Way>FJ-1",
+    "description": "Buscar el caso Jira en busquedas avanzadas",
+    "repeat": 1,
+    "steps": ["Step>FJ-0","Step>G-5","Step>FJ-1","Step>FJ-2","Step>G-3","Step>FJ-7","Step>P-10","Detour>RFJ-1"]
+  },
+  {
+    "id": "Way>FJ-2",
+    "description": "Extraer datos de un caso en Jira en filtros",
+    "repeat": 1,
+    "steps": ["Step>FJ-3","Step>FJ-4","Step>FJ-5","Step>FJ-6"]
+  },
+  {
+    "id": "Way>FJ-3",
+    "description": "Extraer datos de un caso Jira desde el caso",
+    "repeat": 1,
+    "steps": ["Step>CJ-0","Step>CJ-3","Step>CJ-4"]
+  },
+  {
+    "id": "Way>FJ-4",
+    "description": "Setear valores en los pockets si no existe el caso jira",
+    "repeat": 1,
+    "steps": ["Step>P-11","Step>P-12","Step>P-14"]
+  },
+  {
+    "id": "Way>TS-1",
+    "description": "Gestionar tarea Sugar segun tipo y estado de caso Jira",
+    "repeat": 1,
+    "steps": ["Step>TS-1","Step>TS-2","Detour>ET-1","Step>TS-9","Detour>TT-1","Step>TS-7","Step>GS-5"]
+  },
+  {
+    "id": "Way>GTS-1",
+    "description": "Gestionar tareas Sugar con seleccion de respuesta",
+    "repeat": 1,
+    "steps": ["Step>TS-10","Detour>RTS-1","Step>TS-5","Step>TS-6"]
+  },
+  {
+    "id": "Way>GTS-2",
+    "description": "Gestionar tareas Sugar sin seleccionar respuesta",
+    "repeat": 1,
+    "steps": ["Step>TS-5","Step>TS-6"]
+  },
+  {
+    "id": "Way>CS-1",
+    "description": "Rechazar caso Sugar",
+    "repeat": 1,
+    "steps": ["Step>CS-0","Step>CS-1","Step>CS-2","Step>CS-3","Step>NS-1","Step>NS-2","Step>NS-3","Step>GS-5","Step>NS-4","Step>GS-5"]
+  },
+  {
+    "id": "Way>D-1",
+    "description": "Construir texto para documentar tarea jira",
+    "repeat": 1,
+    "steps": ["Step>P-4","Step>P-5","Step>P-6","Step>P-7","Step>P-8"]
+  }
+]

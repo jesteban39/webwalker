@@ -1,0 +1,92 @@
+[
+  {
+    "id": "Detour>CJ-1",
+    "description": "Elegir si abrir caso Jira o saltar ese paso",
+    "pocket": "Jira>caso-estado",
+    "entrys": [
+      { "value": "SIN INICIAR", "steps": ["Step>P-9"] },
+      { "value": "EN ANÁLISIS", "steps": ["Step>P-9"] },
+      { "value": "ESCALADO A FUNCIONAL", "steps": ["Step>P-9"] },
+      { "value": "SIN JIRA", "steps": ["Step>P-13"] },
+      { "value": "default", "steps": ["Way>FJ-3"] }
+    ]
+  },
+  {
+    "id": "Detour>ET-1",
+    "description": "Elegir el estado de la tarea Sugar egun el estado del caso Jira",
+    "pocket": "Jira>caso-estado",
+    "entrys": [
+      { "value": "RESUELTO", "steps": ["Step>TS-4"] },
+      { "value": "WONT'FIX", "steps": ["Step>TS-14"] },
+      { "value": "CANCELADO", "steps": ["Step>TS-14"] },
+      { "value": "EN PROGRESO", "steps": ["Step>TS-3"] },
+      { "value": "ESCALADO A PROVEEDOR", "steps": ["Step>TS-15"] },
+      { "value": "FINALIZADA", "steps": ["Step>TS-4"] },
+      { "value": "EN ANÁLISIS", "steps": ["Step>TS-3"] },
+      { "value": "SIN INICIAR", "steps": ["Step>TS-13"] },
+      { "value": "default", "steps": ["Step>TS-3"] }
+    ]
+  },
+  {
+    "id": "Detour>TT-1",
+    "description": "Decidir como gestionar la tarea segun su tipo",
+    "pocket": "Sugar>tarea-tipo",
+    "entrys": [
+      {
+        "value": "Opción de selección de valor de lista",
+        "steps": ["Way>GTS-1"]
+      },
+      { "value": "default", "steps": ["Way>GTS-2"] }
+    ]
+  },
+  {
+    "id": "Detour>CC-1",
+    "description": "Decidir si se debe rechazar el caso Sugar segun el estado del caso Jira",
+    "pocket": "Jira>caso-estado",
+    "entrys": [
+      { "value": "WONT'FIX", "steps": ["Way>CS-1"] },
+      { "value": "CANCELADO", "steps": ["Way>CS-1"] },
+      { "value": "default", "steps": ["Step>G-0"] }
+    ]
+  },
+  {
+    "id": "Detour>RTS-1",
+    "description": "Seleccionar la respuesta a la tarea Sugar segun el estado del caso Jira",
+    "pocket": "Jira>caso-estado",
+    "entrys": [
+      { "value": "WONT'FIX", "steps": ["Step>TS-12"] },
+      { "value": "default", "steps": ["Step>TS-11"] }
+    ]
+  },
+  {
+    "id": "Detour>RFJ-1",
+    "description": "Verificar si se creo el caso en Jira y continuar segun el caso",
+    "pocket": "Jira>filtro-resultado",
+    "entrys": [
+      { "value": "No se encontraron incidencias", "steps": ["Way>FJ-4"] },
+      { "value": "default", "steps": ["Step>G-5","Step>FJ-8","Detour>RFJ-2"] }
+    ]
+  },
+  {
+    "id": "Detour>RFJ-2",
+    "description": "Verificar si se busco correctamente el caso",
+    "pocket": "Jira>filtro-total-resultados",
+    "entrys": [
+      { "value": "1-50 de más de 1000", "steps": ["Step>G-3","Step>FJ-1","Step>FJ-2","Step>FJ-7","Step>P-10","Detour>RFJ-1"] },
+      { "value": "1–50 de más de 1000", "steps": ["Step>G-3","Step>FJ-1","Step>FJ-2","Step>FJ-7","Step>P-10","Detour>RFJ-1"] },
+      { "value": "1-1 de 1", "steps": ["Way>FJ-2"] },
+      { "value": "1–1 de 1", "steps": ["Way>FJ-2"] },
+      { "value": "default", "steps": ["Way>FJ-2"] }
+    ]
+  },
+  {
+    "id": "Detour>LNR-1",
+    "description": "Verificar si se deve reintentar el login o saltar a verificar",
+    "pocket": "Leap>LN-catch-1",
+    "entrys": [
+      { "value": "retry", "steps": ["Step>LN-2","Step>G-5","Step>LN-3","Step>LN-4"] },
+      { "value": "leap", "steps": ["Step>G-3"] },
+      { "value": "default", "steps": ["Step>G-3"] }
+    ]
+  }
+]
